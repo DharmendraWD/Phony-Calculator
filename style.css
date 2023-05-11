@@ -1,0 +1,40 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: red;
+    overflow: scroll;
+}
+
+.tDark{
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+.tDark img{
+    width: 1000px;
+    min-width:375px ;
+    text-align: center;
+    position: fixed;
+    
+}
+
+.positioned-button{
+
+}
+.btn{
+    display: grid;
+    grid-template-columns: 2fr;
+    margin: 176px 28px;
+    /* padding: 46px 33px; */
+    position: relative;
+    left: 128px;
+}
+/* @media(max-width:375px){
+    .tDark img{
+      width: 376px;
+        
+    }
+} */
