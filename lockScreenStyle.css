@@ -1,0 +1,50 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+.lockScreen{
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+.lockScreen img{
+    width: 1000px;
+    min-width:375px ;
+    text-align: center;
+    position: fixed;
+    transition: 1s ease-in-out;
+    top: 0;
+    /* z-index: 3; */
+    
+}
+
+.positioned-button{
+    width: 18px;
+    height: 40px;
+    cursor: pointer;
+}
+.lBtn{
+    display: grid;
+    grid-template-columns: 2fr;
+    margin: 167px 27px;
+    /* padding: 46px 33px; */
+    position: relative;
+    left: 143px;
+}
+
+.showOp{
+    z-index: 3;
+    opacity: 1;
+    /* width: 1200px; */
+}
+
+.unshowOp{
+    z-index: 0;
+opacity: 0;
+}

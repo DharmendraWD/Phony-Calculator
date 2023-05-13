@@ -5,23 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="script.js"></script>
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lockScreenStyle.css">
+    <link rel="stylesheet" href="partialDarkStyle.css">
+    <link rel="stylesheet" href="calculatorStyle.css">
 </head>
 <body>
-    
-        <button id="loadContentButton">Load Index 2</button>
-      <div id="contentContainer"></div>
-      <div class="tDark">
+    <!-- 1. Total Dark Background | Screen Turned Off   -->
+    <div class="allParts">
+        <div class="tDark" id="contentContainer">
           <img src="images/tDark.png" alt="">
+
+          <div class="timeAndDate unshowOp">
+            <p class="textAlignCenter">demo here</p>
+            <h1 class="textAlignCenter">21:09</h1>
+          </div>
           
        <div class="btn">
-        <button class="positioned-button">h</button>
+        <button class="positioned-button" id="loadContentButton">h</button>
        </div>  
 
     </div>
+
+<!-- 2. LOCKSCREEN HTML  -->
+    <div class="lockScreen">
+        <img src="images/lockScreen.png"alt="" class="unshowOp">
+  </div>
+
+<!-- 3. Partial Dark Image | with Wifi and Battery Icon-Black Walpaper| calculator Bg Interface  -->
+<div class="pDark">
+    <img src="images/pDark.png"alt="" class="unshowOp">
+</div>
+
+<!--  4.CALCULATOR  -->
+<div class="calculatorContainer">
+    <div class="claculatorSubContainer unshowOp">
+<div class="res">
+    <input type="text" name="screen" id="screen" value="" readonly>
+ </div>  
+ <div class="CalNums">
+    <input type="button" class="numbers upperSideBtn" name="numC" value="C" onclick="clearScreen();">
+    <input type="button" class="numbers upperSideBtn" name="numCC" value="C" onclick="clearScreen();">
+    <input type="button" class="numbers upperSideBtn" name="numMo" value="%" onclick="valueButton(this);">
+    <input type="button" class="numbers rightSideBtn" name="numD" value="/" onclick="valueButton(this);">
+ </div>
+ <div class="CalNums">
+    <input type="button" class=" numbers numbersBtn" name="num7" value="7" onclick="valueButton(this);">
+    <input type="button" class="numbers numbersBtn" name="num8" value="8" onclick="valueButton(this);">
+    <input type="button" class="numbers numbersBtn" name="num9" value="9" onclick="valueButton(this);">
+    <input type="button" class="numbers rightSideBtn" name="numM" value="*" onclick="valueButton(this);">
+ </div>
+ <div class="CalNums">
+    <input type="button" class="numbers numbersBtn" name="num4" value="4" onclick="valueButton(this);">
+    <input type="button" class="numbers numbersBtn" name="num5" value="5" onclick="valueButton(this);">
+    <input type="button" class="numbers numbersBtn" name="num6" value="6" onclick="valueButton(this);">
+    <input type="button" class="numbers rightSideBtn" name="num-" value="-" onclick="valueButton(this);">
+ </div>
+ <div class="CalNums">
+    <input type="button" class="numbers numbersBtn" name="num1" value="1" onclick="valueButton(this);">
+    <input type="button" class="numbers numbersBtn" name="num2" value="2" onclick="valueButton(this);">
+    <input type="button" class="numbers numbersBtn" name="num3" value="3" onclick="valueButton(this);">
+    <input type="button" class="numbers rightSideBtn" name="numP" value="+" onclick="valueButton(this);">
+ </div>
+ <div class="CalNums">
+    <input type="button" class="numbers numbersBtn numbersBtn" name="num0" value="0" id="zero" onclick="valueButton(this);">
+    <input type="button" class="numbers numbersBtn" name="numPo" value="." onclick="valueButton(this);">
+    <input type="button" class="numbers numbersBtn" name="numPo" value="00" onclick="valueButton(this);">
+    <input type="button" class="numbers rightSideBtn" name="numEq" value="=" onclick="calCalculate();">
+
+ </div>
+</div>
+</div>
+</div>
+
+<div class="footerPara">
+    <p>Made With <span>&#x2665;</span></p>
+</div>
 
 </body>
 </html>

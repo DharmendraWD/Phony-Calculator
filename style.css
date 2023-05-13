@@ -2,12 +2,12 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: red;
-    overflow: scroll;
+    /* background-color: red; */
+    overflow: hidden;
 }
 
 .tDark{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -18,23 +18,67 @@ body{
     min-width:375px ;
     text-align: center;
     position: fixed;
-    
+    z-index: 1; 
+    transition: 1s ease-in-out; 
 }
 
 .positioned-button{
-
+    width: 18px;
+    height: 40px;
+    cursor: pointer;
 }
 .btn{
     display: grid;
     grid-template-columns: 2fr;
-    margin: 176px 28px;
+    margin: 167px 27px;
     /* padding: 46px 33px; */
     position: relative;
-    left: 128px;
+    left: 143px;
+    z-index: 22;
+    opacity: 0;
 }
-/* @media(max-width:375px){
-    .tDark img{
-      width: 376px;
-        
-    }
-} */
+
+/* Time  */
+.timeAndDate{
+    z-index: 11;
+    color: white;
+    position: absolute;
+    top: 54px;
+    margin-left: 7px;
+    transition: 1s ease-in-out;
+}
+.textAlignCenter{
+    text-align: center;
+}
+.footerPara span{
+    font-size: 34px;
+    position: relative;
+    top: 6px;
+
+    background: linear-gradient(to right, red, rgb(180, 59, 22));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  
+}
+.footerPara p{
+    background: linear-gradient(to right, red, blue, green, purple, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-transform: uppercase;
+  
+}
+.footerPara {
+    position: relative;
+    /* margin: 0 auto; */
+    bottom: 2px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    text-align: x;
+    justify-content: center;
+    top: 182px;
+}
