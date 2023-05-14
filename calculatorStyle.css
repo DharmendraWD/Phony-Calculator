@@ -31,6 +31,7 @@ body{
     font-size: 22px;
     margin: 2px 0px;
     opacity: 82%;
+    color: black;
   }
   .numbersBtn:hover{
 background-color: #e4dede;
@@ -59,7 +60,7 @@ background-color: #e4dede;
     }
     
     .rightSideBtn{
-    background-color: #e0ad13;
+    background-color: #eeb50b;
     }
     .rightSideBtn:hover{
     background-color: #e9ba2e;

@@ -80,5 +80,25 @@ body{
     display: flex;
     text-align: x;
     justify-content: center;
-    top: 182px;
+    top: 142px;
+}
+#arrowImagePara{
+position: relative;
+left: 40px;
+color: rgb(87, 79, 79);
+
+}
+
+@media(max-width:650px){
+    #arrowImagePara{
+        position: relative;
+left: 0;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        color: rgb(141, 65, 65);
+        top: 200px;
+        font-size: 19px;
+        
+        } 
 }

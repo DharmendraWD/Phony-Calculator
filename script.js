@@ -11,8 +11,7 @@ let ddm = document.querySelector(".timeAndDate p")
 let liveTime = document.querySelector(".timeAndDate h1")
 let liveTimeAndDateParent = document.querySelector(".timeAndDate")
 
-
-
+let paraNotes= document.querySelector(".footerText")
 
 loadContentButton.addEventListener('click', (e) => {
   lockScreenImg.classList.toggle("unshowOp")
@@ -27,6 +26,7 @@ loadContentButton.addEventListener('click', (e) => {
     liveTimeAndDateParent.classList.add("showOp");
     liveTimeAndDateParent.style.zIndex="12"
   }
+
   else{
     liveTimeAndDateParent.classList.remove("showOp");
     liveTimeAndDateParent.classList.add("unshowOp");
@@ -39,14 +39,18 @@ loadContentButton.addEventListener('click', (e) => {
   // Lockscreen to open calculator.
   if (totalDark.classList.contains("unshowOp")) {
     lockScreenImg.style.zIndex = '5';
-  } else {
+    paraNotes.classList.add("unshowOp")
+
+  }
+
+  else {
     lockScreenImg.style.zIndex = '';
+    // paraNotes.classList.add("unshowOp")
   }
   if (partialDark.classList.contains("showOp")) {
     // partialDark.classList.remove("showOp") 
     partialDark.classList.add("unshowOp")
     lockScreenImg.classList.add("showOp")
-    console.log("pp")
   }
   // To Hide Calculator when Power Button is pressed 
   claculatorSubContainer.classList.add("unshowOp");
@@ -116,3 +120,5 @@ const monthOfYear = ["January", "February", "March", "April", "May", "June", "Ju
 
 ddm.innerHTML = `${dayOfWeek[day]}, ${date} ${monthOfYear[month]}`;
 liveTime.innerHTML = ` ${hour}:${min}`;
+
+
